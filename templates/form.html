@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Collaborative Community Member Tracker</title>
+
+  </head>
+  <body>
+    <center><h1>Collaborative Community Member Tracker</h1></center>
+    <form method="post" action="/submit">
+      <label for="firstname">First Name:</label>
+      <input type="text" id="firstname" name="firstname"><br><br>
+
+      <label for="lastname">Last Name:</label>
+      <input type="text" id="lastname" name="lastname"><br><br>
+      
+      <label for="email">Email:</label>
+      <input type="text" id="email" name="email"><br><br>
+
+      <label for="phone">Phone:</label>
+      <input type="text" id="phone" name="phone"><br><br>
+
+      <label for="type_dropdown">Type:</label>
+      <select name = "type_dropdown" id="type_dropdown">
+        <option value="Individual">"Individual"</option>
+        <option value="Small Company">"Small Company"</option>
+        <option value="Medium Company">"Medium Company"</option>
+        <option value="Large Company">"Large Company"</option>
+        <option value="Research Lab">"Research Lab"</option>
+        <option value="University">"University"</option>
+        <option value="Association">"Association"</option>
+        <option value="Government Agency">"Government Agency"</option>
+        <option value="Student">"Student"</option>
+      </select><br><br>
+
+    
+      <fieldset>
+          <legend>Industry Sub-Market (select all that apply):</legend>
+
+          <div>
+          <input type="checkbox" name = "markets[]" value="AI">
+          <label for="AI">AI</label>
+          </div>
+
+          <div>
+          <input type="checkbox" name="markets[]" value="AM">
+          <label for="AM">AM</label>
+          </div>
+
+          <div>
+          <input type="checkbox" name="markets[]" value="Auto">
+          <label for="Auto">Auto</label>
+          </div>
+
+          <div>
+          <input type="checkbox" name="markets[]" value="Robotics">
+          <label for="Robotics">Robotics</label>
+          </div>
+
+          <div>
+          <input type="checkbox" name="markets[]" value="Engineering">
+          <label for="Engineering">Engineering</label>
+          </div>
+
+          <div>
+          <input type="checkbox" name="markets[]" value="Medical Devices">
+          <label for="Medical Devices">Medical Devices</label>
+          </div>
+
+          <div>
+          <input type="checkbox" name="markets[]" value="Imaging">
+          <label for="Imaging">Imaging</label>
+          </div>
+
+          <div>
+          <input type="checkbox" name="markets[]" value="Health Admin">
+          <label for="Health Admin">Health Admin</label>
+          </div>
+
+          <div>
+          <input type="checkbox" name="markets[]" value="BioInfo">
+          <label for="BioInfo">BioInfo</label>
+          </div>
+
+          <div>
+          <input type="checkbox" name="markets[]" value="Pharmaceuticals">
+          <label for="Pharmaceuticals">Pharmaceuticals</label>
+          </div>
+
+          <div>
+          <input type="checkbox" name="markets[]" value="Biophysics">
+          <label for="Biophysics">Biophysics</label>
+          </div>
+
+          <div>
+          <input type="checkbox" name="markets[]" value="Neuroscience">
+          <label for="Neuroscience">Neuroscience</label>
+          </div>
+
+          <div>
+          <input type="checkbox" name="markets[]" value="Cell Biology">
+          <label for="Cell Biology">Cell Biology</label>
+          </div>
+
+          <div>
+          <input type="checkbox" name="markets[]" value="Biotechnology">
+          <label for="Biotechnology">Biotechnology</label>
+          </div>
+
+          <div>
+          <input type="checkbox" name="markets[]" value="Nutraceuticals">
+          <label for="Nutraceuticals">Nutraceuticals</label>
+          </div>
+
+          <div>
+          <input type="checkbox" name="markets[]" value="Cosmeceuticals">
+          <label for="Cosmeceuticals">Cosmeceuticals</label>
+          </div>
+
+          <div>
+          <input type="checkbox" name="markets[]" value="Venture Investing">
+          <label for="Venture Investing">Venture Investing</label>
+          </div>
+
+          <div>
+          <input type="checkbox" name="markets[]" value="Physical Therapy">
+          <label for="Physical Therapy">Physical Therapy</label>
+          </div>
+
+          <div>
+          <input type="checkbox" name="markets[]" value="Occupational Therapy">
+          <label for="Occupational Therapy">Occupational Therapy</label>
+          </div>
+
+          <div>
+          <input type="checkbox" name="markets[]" value="CSD">
+          <label for="CSD">CSD</label>
+          </div>
+      </fieldset><br><br>
+
+      <fieldset>
+          <legend>Stages of Involvement (select all that apply):</legend>
+
+          <div>
+          <input type="checkbox" name="stages[]" value="BSP1">
+          <label for="BSP1">BSP1</label>
+          </div>
+
+          <div>
+          <input type="checkbox" name="stages[]" value="Go To Market">
+          <label for="Go To Market">Go To Market</label>
+          </div>
+
+          <div>
+          <input type="checkbox" name="stages[]" value="Scale Up">
+          <label for="Scale Up">Scale Up</label>
+          </div>
+
+          <div>
+          <input type="checkbox" name="stages[]" value="Exit">
+          <label for="Exit">Exit</label>
+          </div>
+
+          <div>
+          <input type="checkbox" name="stages[]" value="Ongoing Administration">
+          <label for="Ongoing Administration">Ongoing Administration</label>
+          </div>
+
+
+      </fieldset><br><br>
+
+      <label for="location_dropdown">Pittsburg Location:</label>
+        <select name="location_dropdown" id="location_dropdown">
+          <option value="BSP1">BSP1</option>
+          <option value="PTC">PTC</option>
+          <option value="Hot Metal">Hot Metal</option>
+          <option value="Oakland">Oakland</option>
+          <option value="Downtown">Downtown</option>
+          <option value="Southside">Southside</option>
+          <option value="Strip">Strip</option>
+          <option value="Lawrenceville">Lawrenceville</option>
+          <option value="East Liberty">East Liberty</option>
+          <option value="Squirrel Hill">Squirrel Hill</option>
+          <option value="Alpha Lab">Alpha Lab</option>
+          <option value="Suburbs">Suburbs</option>
+          <option value="Airport">Airport</option>
+        </select><br><br>
+
+
+
+      <label for="areaofknowledge">Areas of Knowledge/Expertise:</label>
+        <textarea id="areaofknowledge" name="areaofknowledge"></textarea><br><br>
+
+
+      <fieldset>
+          <legend>Needs (select all that apply):</legend>
+
+          <div>
+          <input type="checkbox" name="needs_dropdown[]" value="Investment">
+          <label for="Investment">Investment</label>
+          </div>
+
+          <div>
+          <input type="checkbox" name="needs_dropdown[]" value="Customers">
+          <label for="Customers">Customers</label>
+          </div>
+
+          <div>
+          <input type="checkbox" name="needs_dropdown[]" value="Tech Guidance">
+          <label for="Tech Guidance">Tech Guidance</label>
+          </div>
+
+          <div>
+          <input type="checkbox" name="needs_dropdown[]" value="Business Guidance">
+          <label for="Business Guidance">Business Guidance</label>
+          </div>
+
+          <div>
+          <input type="checkbox" name="needs_dropdown[]" value="Connections">
+          <label for="Connections">Connections</label>
+          </div>
+
+          <div>
+          <input type="checkbox" name="needs_dropdown[]" value="Friends">
+          <label for="Friends">Friends</label>
+          </div>
+
+          <div>
+          <input type="checkbox" name="needs_dropdown[]" value="Talent Acquistion">
+          <label for="Talent Acquistion">Talent Acquistion</label>
+          </div>
+
+      </fieldset><br><br>
+
+
+      <label for="institutes">Institutional Associations:</label>
+        <textarea id="institutes" name="institutes"></textarea><br><br>
+
+      <label for="personals">Personal Associations:</label>
+        <textarea id="personals" name="personals"></textarea><br><br>
+
+      <label for="interactions">Past Interactions:</label>
+        <textarea id="interactions" name="interactions"></textarea><br><br>
+      
+      <input type="submit" value="Submit">
+    </form>
+    
+
+  </body>
+</html>
+
+
