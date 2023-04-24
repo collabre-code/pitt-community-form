@@ -2,6 +2,7 @@
 from flask import Flask, render_template, request
 import pyodbc
 import os
+import pandas as pd
 
 # create an instance of the Flask class
 app = Flask(__name__)
@@ -58,10 +59,13 @@ def submit():
     needs = request.form.getlist('needs_dropdown[]')
     needs_str = ','.join(needs)
 
+    #get current timestamp
+    timestamp = pd.Timestamp.now()  
+
 
     # insert the user input into the database
     cursor = cnxn.cursor()
-    cursor.execute("INSERT INTO COMMUNITYDATABASE (collabreuser, firstname, lastname, email, phone, user_type, industry_submarket, stages_of_involvement, pittsburg_location, areas_of_expertise, needs, institutional_assoc, personal_assoc, past_interactions) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", collabreuser, firstname, lastname, email, phone, user_type, markets_str, stages_str, location, expertise, needs_str, institute_assoc, personal_assoc, past_interactions)
+    cursor.execute("INSERT INTO COMMUNITYDATABASE (collabreuser, firstname, lastname, email, phone, user_type, industry_submarket, stages_of_involvement, pittsburg_location, areas_of_expertise, needs, institutional_assoc, personal_assoc, past_interactions, submit_date) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", collabreuser, firstname, lastname, email, phone, user_type, markets_str, stages_str, location, expertise, needs_str, institute_assoc, personal_assoc, past_interactions, timestamp)
     cnxn.commit()
 
     # return a response to the user
