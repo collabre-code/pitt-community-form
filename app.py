@@ -34,6 +34,7 @@ def submit():
     
 
     # get the user input from the form
+    collabreuser = request.form['collabreuser']
     firstname = request.form['firstname']
     lastname = request.form['lastname']
     email = request.form['email']
@@ -60,7 +61,7 @@ def submit():
 
     # insert the user input into the database
     cursor = cnxn.cursor()
-    cursor.execute("INSERT INTO COMMUNITYDATABASE (firstname, lastname, email, phone, user_type, industry_submarket, stages_of_involvement, pittsburg_location, areas_of_expertise, needs, institutional_assoc, personal_assoc, past_interactions) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", firstname, lastname, email, phone, user_type, markets_str, stages_str, location, expertise, needs_str, institute_assoc, personal_assoc, past_interactions)
+    cursor.execute("INSERT INTO COMMUNITYDATABASE (collabreuser, firstname, lastname, email, phone, user_type, industry_submarket, stages_of_involvement, pittsburg_location, areas_of_expertise, needs, institutional_assoc, personal_assoc, past_interactions) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", collabreuser, firstname, lastname, email, phone, user_type, markets_str, stages_str, location, expertise, needs_str, institute_assoc, personal_assoc, past_interactions)
     cnxn.commit()
 
     # return a response to the user
